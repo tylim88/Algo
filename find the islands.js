@@ -49,6 +49,3 @@ console.log(countIsland(grid4))
 // the code is very short, but it become long to deal with error because if you try to get element of 2D arraywith higher index, it will error, however this is not the case if the array is 1D, weird, such inconsistency!(edited)
 // since it is a recursion, you can try it with any size of 2D array, not limited to 4x5
 // this question is also very similar to question i created to fuck my intern brain
-// why we increment the number of island first before we do the recursion?
-// it is easy, if the land is unknown land, then it must be a part of new island, and recursion will search the rest of the island land
-
