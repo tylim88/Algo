@@ -6,7 +6,7 @@ grid2 = [[1, 1, 0, 0, 0], [1, 1, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 1]]
 grid3 = [[1, 0, 1, 0, 1], [0, 1, 0, 1, 0], [1, 0, 1, 0, 1], [0, 1, 0, 1, 0]]
 
 const searchLand = (index, index2, grid, knownLand) => {
-  knownLand.push(`${index},${index2}`)
+knownLand.push(`${index},${index2}`)
   
 let err1 = false
 let err2 = false
