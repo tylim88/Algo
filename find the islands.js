@@ -4,55 +4,21 @@
 grid1 = [[1, 1, 1, 1, 0], [1, 1, 0, 1, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0]]
 grid2 = [[1, 1, 0, 0, 0], [1, 1, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 1]]
 grid3 = [[1, 0, 1, 0, 1], [0, 1, 0, 1, 0], [1, 0, 1, 0, 1], [0, 1, 0, 1, 0]]
+grid4 = [[1, 1, 1, 1, 1], [0, 0, 0, 1, 0], [0, 1, 0, 1, 1], [0, 1, 1, 1, 0]]
 
 const searchLand = (index, index2, grid, knownLand) => {
-knownLand.push(`${index},${index2}`)
-  
-let err1 = false
-let err2 = false
-let err3 = false
+  if (knownLand.indexOf(`${index},${index2}`) === -1) {
+    knownLand.push(`${index},${index2}`)
+    if (!(grid[index] && grid[index][index2])) {
+      return
+    }
 
-try {
-  grid[index][index2 + 1]
-} catch (error) {
-  err1 = error
-} finally {
-  if (!err1) {
-    if (grid[index][index2 + 1]) {
-      //right
-      
-      searchLand(index, index2 + 1, grid, knownLand)
-    }
-  }
-}
+    searchLand(index, index2 + 1, grid, knownLand)
+    searchLand(index + 1, index2, grid, knownLand)
+    searchLand(index - 1, index2, grid, knownLand)
+    searchLand(index, index2 - 1, grid, knownLand)
 
-try {
-  grid[index + 1][index2]
-} catch (error) {
-  err2 = error
-} finally {
-  if (!err2) {
-    if (grid[index + 1][index2]) {
-      //bottom
-      
-      searchLand(index + 1, index2, grid, knownLand)
-    }
-  }
-}
-try {
-  grid[index][index2 - 1]
-} catch (error) {
-  err3 = error
-} finally {
-  if (!err3) {
-    if (
-      grid[index][index2 - 1] &&
-      knownLand.indexOf(`${index},${index2}`) === -1
-      ) {
-        //left
-        searchLand(index - 1, index2, grid, knownLand)
-      }
-    }
+    return true
   }
 }
 
@@ -60,10 +26,7 @@ const countIsland = (grid) => {
   let knownLand = []
   return grid.reduce((island, array, index) => {
     array.forEach((element, index2) => {
-      if (knownLand.indexOf(`${index},${index2}`) === -1 && element === 1) {
-        island++
-        searchLand(index, index2, grid, knownLand)
-      }
+      element === 1 && searchLand(index, index2, grid, knownLand) && island++
     })
     return island
   }, 0)
@@ -72,6 +35,7 @@ const countIsland = (grid) => {
 console.log(countIsland(grid1))
 console.log(countIsland(grid2))
 console.log(countIsland(grid3))
+console.log(countIsland(grid4))
 
 // the logic behind it is
 // 1. create an empty "knownLand" array
