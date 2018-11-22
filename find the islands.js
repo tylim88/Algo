@@ -87,5 +87,4 @@ console.log(countIsland(grid3))
 // this question is also very similar to question i created to fuck my intern brain
 // why we increment the number of island first before we do the recursion?
 // it is easy, if the land is unknown land, then it must be a part of new island, and recursion will search the rest of the island land
-// const searchLand = (index, index2, grid, knownLand) => {
-//   knownLand.push(`${index},${index2}`)
+
