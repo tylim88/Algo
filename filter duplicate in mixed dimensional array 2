@@ -1,17 +1,15 @@
 function arrayUnique(items) {
     var hash = {}
     var out = []
-    var i, ilen, item
 
-    for (i = 0, ilen = items.length; i < ilen; ++i) {
-        item = items[i]
-        if (!hash[item]) {
-            hash[item] = true
-            out.push(item)
+    items.forEach(e => {
+        if (!hash[e]) {
+            hash[e] = true;
+            out.push(e);
         }
-    }
+    });
 
-    return out
+    return out;
 }
 
 // example question
