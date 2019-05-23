@@ -1,3 +1,4 @@
+```javascript
 //to get started, simply change originalArray variable to any dimension (mixed or not mixed) you desire
 
 var originalArray = [[1, 1], [1, 1],  2, [3, 3], [5,6,[7,8,[9,10],11]], [3, 3], 4, 4, [5,6,[7,8,[9,10],11]]];
@@ -122,4 +123,6 @@ removeDuplicate(originalArray);
 
 // console.log(element);
 // console.log(twoDimensionArray);
+```
 
+This code is old, will update syntax when I feel want to.
