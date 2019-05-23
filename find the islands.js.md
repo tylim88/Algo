@@ -1,3 +1,6 @@
+# find the islands
+
+```javascript
 //find the island
 // Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
 //https://leetcode.com/problems/number-of-islands/
@@ -48,4 +51,6 @@ console.log(countIsland(grid4))
 // 2.b.iii if the left element is and is not in the knownLand list, recur into step 2.b.i(edited)
 // the code is very short, but it become long to deal with error because if you try to get element of 2D arraywith higher index, it will error, however this is not the case if the array is 1D, weird, such inconsistency!(edited)
 // since it is a recursion, you can try it with any size of 2D array, not limited to 4x5
-// this question is also very similar to question i created to fuck my intern brain
+```
+not really the question I designed but some one shows me and this is how I solve it
+not optimized though
