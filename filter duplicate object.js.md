@@ -1,3 +1,6 @@
+# filter duplicate object
+
+```javascript
 var arr = [
 	{ a: 1, b: 2, c: 3 },
 	{ ccc: 4 },
@@ -25,3 +28,4 @@ var answer = uniqueIndex.map(e => {
 })
 
 console.log(answer)
+```
