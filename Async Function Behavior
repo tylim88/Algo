@@ -1,3 +1,4 @@
+```javascript
 var a = async () => {
 	console.log(1)
 	const b = await 2
@@ -7,3 +8,6 @@ var a = async () => {
 console.log(0)
 a()
 console.log(4)
+```
+
+guess the output
