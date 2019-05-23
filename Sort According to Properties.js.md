@@ -1,3 +1,5 @@
+# Sort According to Properties
+
 ```javascript
 const item = ['ball', 'box', 'ball', 'ball', 'box', 'x']
 const price = [2, 2, 2, 2, 2, 5]
@@ -32,4 +34,4 @@ console.log('price', itemPrice)
 console.log('weight', itemWeight)
 ```
 
-Question not yet complete
+Question not yet complete, probably will delete this as this is just some long winding question that doesn't really challenge your knowledge or algorithm.
