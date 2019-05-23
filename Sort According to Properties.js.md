@@ -1,3 +1,4 @@
+```javascript
 const item = ['ball', 'box', 'ball', 'ball', 'box', 'x']
 const price = [2, 2, 2, 2, 2, 5]
 const weight = [1, 2, 3, 1, 2, 2]
@@ -29,3 +30,6 @@ item.forEach((element, index) => {
 console.log('index', itemIndex)
 console.log('price', itemPrice)
 console.log('weight', itemWeight)
+```
+
+Question not yet complete
