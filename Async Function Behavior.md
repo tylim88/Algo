@@ -1,3 +1,4 @@
+# Async Function Behavior.md
 ```javascript
 var a = async () => {
 	console.log(1)
