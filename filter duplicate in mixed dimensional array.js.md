@@ -1,3 +1,5 @@
+# filter duplicate in mixed dimensional array
+
 ```javascript
 //to get started, simply change originalArray variable to any dimension (mixed or not mixed) you desire
 
