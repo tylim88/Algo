@@ -7,7 +7,7 @@ var a = async () => {
 	return console.log(3)
 }
 console.log(0)
-a()
+console.log(a())
 console.log(4)
 ```
 
